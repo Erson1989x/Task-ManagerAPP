@@ -1,0 +1,16 @@
+/* --- DataContainer --- */
+
+
+.task-card-footer-text {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    color: var(--grayLight);
+}
+
+.task-card-footer-date {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: var(--black);
+}

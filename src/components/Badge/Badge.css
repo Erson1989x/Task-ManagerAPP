@@ -1,0 +1,17 @@
+/* --- Badge --- */
+
+.task-card-badge {
+
+    border-radius: 12px;
+    padding:5px 10px;
+    background: #F2F2F2;
+
+}
+
+.task-card-badge-text {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--gray);
+    text-align: center;
+    line-height: 14px;
+}

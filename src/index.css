@@ -1,0 +1,19 @@
+/* --- Reset --- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Sen", sans-serif;
+}
+
+:root {
+    --white: #FFFFFF;
+    --lighBlue: #f3f3fb;
+    --lightGray: #F2F2F2;
+    --gray: #808080;
+    --lightishGray: #B9B9B9;
+    --grayLight: #999999;
+    --black: #16171D;
+
+}
