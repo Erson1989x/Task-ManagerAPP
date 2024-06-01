@@ -7,6 +7,12 @@
     font-family: "Sen", sans-serif;
 }
 
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: block;
+}
+
 :root {
     --white: #FFFFFF;
     --lighBlue: #f3f3fb;
@@ -15,5 +21,10 @@
     --lightishGray: #B9B9B9;
     --grayLight: #999999;
     --black: #16171D;
+    --darkBlack: #2C2E3A;
+    --lightishGray: #A8ABBD;
+    --blue:#3754DB;
+
+
 
 }

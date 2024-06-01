@@ -1,24 +1,24 @@
-/* --- Main App --- */
-body {
-  width: 100%;
- min-height: 100vh;
+
+/* --- TaskCard --- */
+
+.app-card-container {
+
+
+}
+
+.app-card-header {
+
+}
+
+.app-card-slide {
+  width: 500px;
+  min-height: 600px;
   background-color: var(--white);
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: auto;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0px 30px 60px rgba(32, 56, 85, 0.15);
+  position: relative;
 
 }
 
-/* --- Media Query --- */
 
-@media screen and (min-width: 1024px) {
-
-  body {
-    min-width: fit-content;
-
-  }
-
-}

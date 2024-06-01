@@ -1,16 +1,17 @@
 /* --- DataContainer --- */
 
-
-.task-card-footer-text {
-    font-size: 12px;
+.due-date p:first-child {
     font-weight: 400;
+    font-size: 12px;
     line-height: 14px;
-    color: var(--grayLight);
-}
-
-.task-card-footer-date {
-    font-size: 14px;
+    letter-spacing: -0.02em;
+    color: #999999;
+  }
+  
+  .due-date p:last-child {
     font-weight: 700;
-    line-height: 16px;
-    color: var(--black);
-}
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.03em;
+    color: #16171d;
+  }

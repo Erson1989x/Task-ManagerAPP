@@ -1,12 +1,16 @@
 import './DataContainer.css'
 
 const DataContainer = (props) => {
+
+    const formattedDate = props.taskDate instanceof Date ? props.taskDate.toLocaleDateString() : '';
+
+
     return (
-        <div>
-            <p className='task-card-footer-text'>Due Date</p>
-            <p className='task-card-footer-date'>{props.taskDate.toLocaleDateString()}</p>
-        </div>
-    )
-}
+      <div className='task-card-date'>
+        <p>Due Date</p>
+        <p>{formattedDate}</p>
+      </div>
+    );
+  };
 
 export default DataContainer
