@@ -54,7 +54,7 @@ const Form = (props) => {
     e.preventDefault()
    const newTask = {
         taskName: taskName,
-        taskDate: taskDate,
+        taskDate: new Date(taskDate),
         taskContent: taskDetails,
         badgeText: 'Todo'
     }

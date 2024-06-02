@@ -58,8 +58,8 @@ const App =() => {
       ...prev,
       {
         ...newTask,
-        taskData: new Date(newTask.taskDate),
-        taskId:"T-" + prev.length + 1
+        taskData: new Date(newTask),
+        taskId: `T-${prev.length + 1}`
       }
     ])
   }
