@@ -10,6 +10,14 @@
 
 }
 
+.modal-header {
+  background-color: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0px 30px 60px rgba(32, 56, 85, 0.15);
+  position: relative;
+}
+
 .app-card-slide {
   width: 500px;
   min-height: 600px;

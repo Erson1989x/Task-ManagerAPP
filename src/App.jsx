@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './App.css';
 import AppContainer from './components/TaskViewer/AppContainer.jsx';
 import Form from './components/Forms/Forms.jsx';
+import Modal from './components/Modal/Modal.jsx';
 
 const taskData = [
   {
@@ -50,6 +51,8 @@ const taskData = [
 
 const App =() => {
   const [taskList , setTaskList] = useState(taskData)
+  const [isOpen, setIsOpen] = useState(false);
+
 
   const addNewTask = (newTask) => {
     console.log('newTask', newTask)
@@ -62,6 +65,15 @@ const App =() => {
         taskId: `T-${prev.length + 1}`
       }
     ])
+    setIsOpen(false)
+  }
+
+  const openModal = () => {
+    setIsOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsOpen(false)
   }
 
 
@@ -71,15 +83,19 @@ const App =() => {
     <div className='app-card-container'>
       <div className='app-card-header'>
         <h3>Task Manager</h3>
-        <AppContainer taskList={taskList}/>
+        <AppContainer onCreateModal={openModal} taskList={taskList}/>
 
-        <div className='app-card-slide-bar'>
+       {/*} <div className='app-card-slide-bar'>
           <div className='app-card-slide'>
              <h3>Create task</h3>
              <Form propAddNewTask={addNewTask}/>
           </div>
-        </div>
+        </div> */}
       </div>
+     <Modal onClose={closeModal} isOpen={isOpen}>
+         <h3>Create task</h3>
+         <Form propAddNewTask={addNewTask}/>
+      </Modal>
     </div>
   );
 };
