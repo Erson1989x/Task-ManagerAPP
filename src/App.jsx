@@ -50,7 +50,7 @@ const taskData = [
 ]
 
 const App =() => {
-  const [taskList , setTaskList] = useState(taskData)
+  const [taskList , setTaskList] = useState([])
 
 
   const addNewTask = (newTask) => {
