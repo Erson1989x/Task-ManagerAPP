@@ -28,19 +28,6 @@
   gap: 40px 50px;
 }
 
-.control-panel-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 40px;
-}
-
-.app-title {
-  font-size: 32px;
-  line-height: 38px;
-  font-weight: 700;
-  color: var(--blackt);
-}
 
 .app-subtitle {
   margin-top: 10px;

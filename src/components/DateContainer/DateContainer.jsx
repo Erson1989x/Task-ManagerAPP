@@ -1,6 +1,6 @@
-import './DataContainer.css'
+import './DateContainer.css'
 
-const DataContainer = (props) => {
+const DateContainer = (props) => {
 
  
 
@@ -13,4 +13,4 @@ const DataContainer = (props) => {
     );
   };
 
-export default DataContainer
+export default DateContainer

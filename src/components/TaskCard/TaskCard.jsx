@@ -1,7 +1,7 @@
 
 import './TaskCard.css'
 import Badge from '../Badge/Badge'
-import DataContainer from '../DataContainer/DataContainer';
+import DateContainer from '../DateContainer/DateContainer'
 
 const TaskCard = (props) => {
 
@@ -17,7 +17,7 @@ const TaskCard = (props) => {
                 <p>{props.taskContent}</p>
             </div>
             <div className='task-card-footer'>
-                <DataContainer taskDate={props.taskDate} />
+                <DateContainer taskDate={props.taskDate} />
             </div>
         </div>
     )

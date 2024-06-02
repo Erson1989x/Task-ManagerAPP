@@ -51,7 +51,6 @@ const taskData = [
 
 const App =() => {
   const [taskList , setTaskList] = useState(taskData)
-  const [isOpen, setIsOpen] = useState(false);
 
 
   const addNewTask = (newTask) => {
@@ -65,17 +64,7 @@ const App =() => {
         taskId: `T-${prev.length + 1}`
       }
     ])
-    setIsOpen(false)
   }
-
-  const openModal = () => {
-    setIsOpen(true)
-  }
-
-  const closeModal = () => {
-    setIsOpen(false)
-  }
-
 
 
   return (
@@ -83,19 +72,9 @@ const App =() => {
     <div className='app-card-container'>
       <div className='app-card-header'>
         <h3>Task Manager</h3>
-        <AppContainer onCreateModal={openModal} taskList={taskList}/>
-
-       {/*} <div className='app-card-slide-bar'>
-          <div className='app-card-slide'>
-             <h3>Create task</h3>
-             <Form propAddNewTask={addNewTask}/>
-          </div>
-        </div> */}
+        <AppContainer addNewTask={addNewTask} taskList={taskList}/>
       </div>
-     <Modal onClose={closeModal} isOpen={isOpen}>
-         <h3>Create task</h3>
-         <Form propAddNewTask={addNewTask}/>
-      </Modal>
+
     </div>
   );
 };

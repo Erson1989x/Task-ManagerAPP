@@ -1,24 +1,23 @@
+import ControlPanel from '../ControlPanel/ControlPanel';
 import TaskCard from '../TaskCard/TaskCard';
 import './AppContainer.css'
+import React from 'react'
+
 
 const  AppContainer = (props) => {
+
+  const todoItems = props.taskList.filter((task) => task.badgeText === 'Todo')
+
     return (
         <div className='app-container'>
        {/*app-container-control-panal*/}
-         <div className='control-panel-container'>
-           <div>
-               <h3 className='app-title'>Tasks</h3> 
-               <p className='app-subtitle'>Your tasks in your space.</p>
-            </div>
-            <button onClick={props.onCreateModal} className='create-task-button'>Create Task</button>
-         </div>
-
+        <ControlPanel addNewTask={props.addNewTask}/>
             <div className='task-app-container'>
                 <div className='task-list-grid'>
                  {
-                    props.taskList.map((task, index) => {
+                    todoItems.map((task, index) => {
                         return (
-                            <TaskCard key={index} taskId={task.taskId} badgeText={task.badgeText} taskContent={task.taskContent} taskDate={task.taskDate}/>
+                            <TaskCard key={task.taskId} taskId={task.taskId} badgeText={task.badgeText} taskContent={task.taskContent} taskDate={task.taskDate}/>
                         )
                     })
                  }
