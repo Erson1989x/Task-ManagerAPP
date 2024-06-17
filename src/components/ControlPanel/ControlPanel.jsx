@@ -6,7 +6,7 @@ import Form from '../Forms/Forms.jsx'
 
 const ControlPanel = (props) => {
 
-  const { isOpen, setIsOpen } = props;
+  const { isOpen, setIsOpen, addNewTask, taskList } = props;
 
     const openModal = () => {
         setIsOpen(true)
@@ -17,7 +17,7 @@ const ControlPanel = (props) => {
       }
     
       const handleTaksAdd = (task) => {
-        props.addNewTask(task)
+        addNewTask(task)
         closeModal()
       }
     return (
@@ -27,9 +27,9 @@ const ControlPanel = (props) => {
             <h3 className='app-title'>Tasks</h3> 
             <p className='app-subtitle'>Your tasks in your space.</p>
          </div>
-         { 
+         { taskList.length > 0 && (
          <button onClick={openModal} className='create-task-button'>Create Task</button>
-         }
+         )}
          <Modal onClose={closeModal} isOpen={isOpen}>
          <h3>Create task</h3>
          <Form propAddNewTask={handleTaksAdd}/>

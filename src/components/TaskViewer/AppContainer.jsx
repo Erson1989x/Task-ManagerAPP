@@ -12,6 +12,7 @@ const AppContainer = (props) => {
     <div className="app-container">
       {/*app-container-control-panal*/}
       <ControlPanel
+        taskList={props.taskList}
         isOpen={isOpen}
         setIsOpen={setIsOpen}
         addNewTask={props.addNewTask}
@@ -32,7 +33,7 @@ const AppContainer = (props) => {
             })}
           </div>
         ) : (
-          <EmptyListMessage />
+          <EmptyListMessage OnCreateTaskClick={setIsOpen} />
         )}
       </div>
     </div>
