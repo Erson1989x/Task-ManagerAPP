@@ -36,14 +36,14 @@ const taskData = [
 
 {
   taskId: 'T-5',
-  badgeText: 'Done',
+  badgeText: 'Pending',
   taskContent: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
   taskDate: new Date(2022,5,25)
 },
 
 {
   taskId: 'T-6',
-  badgeText: 'Done',
+  badgeText: 'In Progress',
   taskContent: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
   taskDate: new Date(2022,5,25)
 }

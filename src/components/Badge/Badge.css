@@ -4,7 +4,7 @@
 
     border-radius: 12px;
     padding:5px 10px;
-    background: #F2F2F2;
+    background:var(--lightGray);
 
 }
 
@@ -14,4 +14,24 @@
     color: var(--gray);
     text-align: center;
     line-height: 14px;
+}
+
+.badge-todo {
+    background-color: var(--lightGray);
+    color: var(--gray);
+}
+
+.badge-in-progress {
+    background-color: var(--lightGray);
+    color: var(--blue);
+}
+
+.badge-pending {
+    background-color: var(--lightGray);
+    color: var(--orange);
+}
+
+.badge-completed {
+    background-color: var(--lightGray);
+    color: var(--green);
 }
