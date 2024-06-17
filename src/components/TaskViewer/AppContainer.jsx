@@ -5,22 +5,22 @@ import TaskCard from "../TaskCard/TaskCard";
 import EmptyListMessage from "../EmptyListMessage/EmptyListMessage";
 import "./AppContainer.css";
 
-const AppContainer = (props) => {
+const AppContainer = ({taskList, addNewTask}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="app-container">
       {/*app-container-control-panal*/}
       <ControlPanel
-        taskList={props.taskList}
+        taskList={taskList}
         isOpen={isOpen}
         setIsOpen={setIsOpen}
-        addNewTask={props.addNewTask}
+        addNewTask={addNewTask}
       />
       <div className="task-app-container">
-        {props.taskList.length > 0 ? (
+        {taskList.length > 0 ? (
           <div className="task-list-grid">
-            {props.taskList.map((task, index) => {
+            {taskList.map((task, index) => {
               return (
                 <TaskCard
                   key={task.taskId}
