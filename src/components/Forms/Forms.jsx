@@ -1,6 +1,7 @@
 import "./Forms.css";
 import React, { useState, useEffect } from "react";
 import clsx from "clsx";
+import formValidator from "./formValidator";
 
 const Form = (props) => {
   const [taskName, setTaskName] = useState("");
@@ -14,25 +15,10 @@ const Form = (props) => {
   });
 
   useEffect(() => {
-   let taskNameErrorMessage = '';
-   let taskDateErrorMessage = '';
-   let taskDetailsErrorMessage = '';
-   let isFormValid = true
-
-   if (taskName.length === 0) {
-     taskNameErrorMessage = 'Task name is required';
-     isFormValid = false;
-   }
-   if (taskDate.length === 0) {
-     taskDateErrorMessage = 'Task date is required';
-   }
-   if (taskDetails.length === 0) {
-     taskDetailsErrorMessage = 'Task details are required';
-   }
-
-   setFormValidation({taskName: taskNameErrorMessage, taskDate: taskDateErrorMessage, taskDetails: taskDetailsErrorMessage, isValid: isFormValid});
+   setFormValidation(formValidator(taskName, taskDate, taskDetails));
 
   }, [taskName, taskDate, taskDetails]);
+
 
 
   /*const [formData , setFormData] = useState({
