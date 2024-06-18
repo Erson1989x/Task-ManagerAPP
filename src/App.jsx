@@ -29,7 +29,7 @@ const taskData = [
 
 {
   taskId: 'T-4',
-  badgeText: 'Done',
+  badgeText: 'Completed',
   taskContent: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
   taskDate: new Date(2022,5,25)
 },

@@ -16,22 +16,22 @@
     line-height: 14px;
 }
 
-.badge-todo {
+.gray {
     background-color: var(--lightGray);
     color: var(--gray);
 }
 
-.badge-in-progress {
+.blue {
     background-color: var(--lightGray);
     color: var(--blue);
 }
 
-.badge-pending {
+.orange {
     background-color: var(--lightGray);
     color: var(--orange);
 }
 
-.badge-completed {
+.green {
     background-color: var(--lightGray);
     color: var(--green);
 }
