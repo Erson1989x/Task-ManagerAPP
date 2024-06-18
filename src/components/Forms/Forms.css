@@ -21,6 +21,10 @@
 
 }
 
+input, textarea {
+    outline: none;
+}
+
 textarea.form-input-name {
     resize: none;
 
@@ -36,4 +40,18 @@ textarea.form-input-name {
     color: var(--white);
     border: none;
     cursor: pointer;
+}
+
+.error {
+    border: 1px solid red;
+    background-color: rgb(255, 200, 200);
+}
+
+.error-message {
+    font-size: 12px;
+    color: red;
+}
+
+:disabled {
+    opacity: 0.5;
 }
