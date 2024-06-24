@@ -30,6 +30,9 @@ const ControlPanel = (props) => {
          { taskList.length > 0 && (
          <button onClick={openModal} className='create-task-button'>Create Task</button>
          )}
+         <div>
+         <TaskFilter />
+         </div>
          <Modal onClose={closeModal} isOpen={isOpen}>
          <h3>Create task</h3>
          <Form propAddNewTask={handleTaksAdd}/>

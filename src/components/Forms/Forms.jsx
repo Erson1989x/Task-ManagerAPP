@@ -1,7 +1,7 @@
 import "./Forms.css";
 import React, { useState, useEffect } from "react";
 import clsx from "clsx";
-import formValidator from "./formValidator";
+import { formValidator } from "./formValidator";
 
 const Form = (props) => {
   const [taskName, setTaskName] = useState("");

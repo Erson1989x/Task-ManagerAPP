@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, createContext } from 'react';
 import './App.css';
 import AppContainer from './components/TaskViewer/AppContainer.jsx';
 import Form from './components/Forms/Forms.jsx';
@@ -49,6 +49,8 @@ const taskData = [
 }
 ]
 
+export const TaskContext = createContext();
+
 const App =() => {
   const [taskList , setTaskList] = useState(taskData)
 
@@ -72,7 +74,9 @@ const App =() => {
     <div className='app-card-container'>
       <div className='app-card-header'>
         <h3>Task Manager</h3>
-        <AppContainer addNewTask={addNewTask} taskList={taskList}/>
+        <TaskContext.Provider value={taskList}>
+         <AppContainer addNewTask={addNewTask} taskList={taskList}/>
+        </TaskContext.Provider>
       </div>
 
     </div>

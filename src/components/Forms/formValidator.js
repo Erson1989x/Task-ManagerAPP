@@ -1,6 +1,6 @@
-import React from "react";
 
-const formValidator = (taskDate, taskName, taskDetails) => {
+
+export const formValidator = (taskDate, taskName, taskDetails) => {
   let taskNameErrorMessage = "";
   let taskDateErrorMessage = "";
   let taskDetailsErrorMessage = "";
@@ -38,4 +38,3 @@ const formValidator = (taskDate, taskName, taskDetails) => {
   };
 };
 
-export default formValidator;
