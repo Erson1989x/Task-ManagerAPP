@@ -2,6 +2,7 @@ import React from 'react'
 import './ControlPanel.css'
 import Modal from '../Modal/Modal.jsx'
 import Form from '../Forms/Forms.jsx'
+import TaskFilter from '../TaskFilter/TaskFilter.jsx'
 
 
 const ControlPanel = (props) => {
@@ -31,7 +32,7 @@ const ControlPanel = (props) => {
          <button onClick={openModal} className='create-task-button'>Create Task</button>
          )}
          <div>
-         <TaskFilter />
+        <TaskFilter todoItems={taskList} />
          </div>
          <Modal onClose={closeModal} isOpen={isOpen}>
          <h3>Create task</h3>

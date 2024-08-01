@@ -2,8 +2,7 @@ import React from 'react';
 import { useState, createContext } from 'react';
 import './App.css';
 import AppContainer from './components/TaskViewer/AppContainer.jsx';
-import Form from './components/Forms/Forms.jsx';
-import Modal from './components/Modal/Modal.jsx';
+
 
 const taskData = [
   {
