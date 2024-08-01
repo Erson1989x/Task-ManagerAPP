@@ -8,7 +8,7 @@ const TaskFilter = () => {
   const todoItems = useContext(TaskContext);
   const { selectedStatus, setSelectedStatus } = useContext(StatusContext);
 
-  const taskFilterItems = ["All Tasks", "Completed", "Pending"];
+  const taskFilterItems = ["All Tasks", "Completed", "Pending", "In Progress"];
 
   const getCountByStatus = (status) => {
     // Implement the logic to get the count based on the status
@@ -19,6 +19,8 @@ const TaskFilter = () => {
       return todoItems.filter((item) => item.completed).length;
     } else if (status === "Pending") {
       return todoItems.filter((item) => !item.completed).length;
+    } else if (status === "In Progress") {
+      return todoItems.filter((item) => item.status === "In Progress").length;
     }
   };
 
